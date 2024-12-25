@@ -168,4 +168,10 @@ body {
       opacity: 1;
     }
   }
-  
+  footer{
+    position : relative;
+    line-height:0.7em;
+  }
+  .h3{
+    opacity:0.5;
+  }
