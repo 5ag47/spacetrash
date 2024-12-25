@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오은의 잡동사니</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="main-screen">
+    <div class="main">
+      <h1 class="line1" data-text="오은의">오은의</h1>
+      <h1 class="line2" data-text="우주쓰레기">우주쓰레기</h1>
+      
+    </div>
+  </div>
+  <script>
+    function glitch(element){
+        let count = 0
+        setInterval(() => {
+            const skew=Math.random()*10-10
+            const top1=Math.random()*100
+            const btm1=Math.random()*100
+            const top2=Math.random()*100
+            const btm2=Math.random()*100
+            element.style.setProperty('--skew',`${skew}deg`)
+            element.style.setProperty('--t1', `${top1}%`)
+            element.style.setProperty('--b1', `${btm1}%`)
+            element.style.setProperty('--t2', `${top2}%`)
+            element.style.setProperty('--b2', `${btm2}%`)
+            element.style.setProperty('--scale', `1`)
+            count++
+            if(count%50===0){
+                const bigSkew=Math.random()*180-90
+                element.style.setProperty('--skew',`${bigSkew}deg`)
+            }
+           
+        },100)
+    }
+    const line2=document.querySelector('.line2')
+    glitch(line2)
+  </script>
+  <div class="pofol">
+    <div class="p" id="p1">
+      <a href="https://5ag47.github.io/cafe/cafe.html" target="_blank">
+        <span class="pl">카페추천</span>
+      </a>
+    </div>
+    <div class="p" id="p2">
+      <a href="https://5ag47.github.io/processingss/" target="_blank">
+        <span class="pl">Processing</span>
+      </a>
+    </div>
+    <div class="p" id="p3">
+      <a href="water.html" target="_blank">
+        <span class="pl">CSS</span>
+      </a>
+    </div>
+    <div class="p" id="p4">
+      <a href="https://example.com/project4" target="_blank">
+        <span class="pl">작품 4</span>
+      </a>
+    </div>
+  </div>
+  
+  <div class="stars">
+    <div class="star" style="top: 10%; left: 20%;"></div>
+    <div class="star" style="top: 30%; left: 50%; animation-delay: 0.3s;"></div>
+    <div class="star" style="top: 70%; left: 80%; animation-delay: 0.6s;"></div>
+    <div class="star" style="top: 50%; left: 10%; animation-delay: 0.3s;"></div>
+    <div class="star" style="top: 85%; left: 40%; animation-delay: 0.3s;"></div>
+    <div class="star" style="top: 20%; left: 70%; animation-delay: 0.9s;"></div>
+    <div class="star" style="top: 60%; left: 30%; animation-delay: 0.6s;"></div>
+    <div class="star" style="top: 15%; left: 90%; animation-delay: 0.9s;"></div>
+    <div class="star" style="top: 40%; left: 60%; animation-delay: 0s;"></div>
+    <div class="star" style="top: 75%; left: 20%; animation-delay: 0.6s;"></div>
+  </div>
+</body>
+</html>
